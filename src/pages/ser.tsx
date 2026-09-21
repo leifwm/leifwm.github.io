@@ -4,6 +4,7 @@ import React from "react";
 import DefaultLayout from "@/layouts/default";
 import { assetUrl } from "@/config/site";
 import serCoverImage from "../../assets/img/serdigital_imgs/ser_cover.jpg";
+import serResultsImage from "../../assets/img/serdigital_imgs/ser-resultados.png";
 
 const studentMindsets = [
   {
@@ -362,7 +363,7 @@ export default function SerDigitalCaseStudy() {
         <p> 
           Results shared for the years following the project
         </p>
-        <img src={assetUrl("/assets/img/serdigital_imgs/ser-resultados.png")} alt="Student Personas" className="mb-6 rounded-lg"/>
+        <img src={serResultsImage} alt="Ser Educacional results" className="mb-6 rounded-lg"/>
 
 
       </Section>
