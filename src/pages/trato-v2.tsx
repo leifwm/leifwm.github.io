@@ -208,7 +208,6 @@ export default function TratoV2Page() {
           <div className="trato-v2__content">
             <div className="trato-v2__version trato-v2__wrap">
               <a href={routeUrl("/#projects")}>← All projects</a>
-              <a href={routeUrl("/trato")}>View original case study ↗</a>
             </div>
 
             <header className="trato-v2__hero trato-v2__wrap" id="project">
@@ -562,7 +561,6 @@ export default function TratoV2Page() {
                 navigated every day.
               </p>
               <div className="trato-v2__end-links">
-                <a href={routeUrl("/trato")}>Compare with the original ↗</a>
                 <a href={routeUrl("/#projects")}>Back to all projects →</a>
               </div>
             </section>
