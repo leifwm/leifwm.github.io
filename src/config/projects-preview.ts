@@ -11,7 +11,7 @@ export const projectPreviews = {
       description: "Expanding the pilot app from VLI (Top 5 largest logistic brazilian companies) from only connecting truck drivers with terminals to establishing a service ecosystem to support the truck drivers journey.",
       where: "At Accenture for VLI",
       tags: ["Service Design", "Ux Research", "Product Design"],
-      href: "/trato",
+      href: "/trato-v2",
     },
     {
       id: 2,

@@ -9,7 +9,7 @@ export interface ThemeSwitchProps {
 }
 
 export const ThemeSwitch: FC<ThemeSwitchProps> = ({ className }) => {
-  const { resolvedTheme, setTheme } = useTheme("light");
+  const { resolvedTheme, setTheme } = useTheme("dark");
 
   const isLight = resolvedTheme === "light";
 

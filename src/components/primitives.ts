@@ -1,5 +1,14 @@
 import { tv } from "tailwind-variants";
 
+export const portfolioColors = {
+  raspberry: "#EB145B",
+  beetroot: "#AE1F4C",
+  cloudberry: "#FF7900",
+  currant: "#15363F",
+  breeze: "#11D1C6",
+  aloe: "#39DD91",
+} as const;
+
 export const title = tv({
   base: "tracking-tight inline font-semibold",
   variants: {
@@ -12,7 +21,7 @@ export const title = tv({
       pink: "from-[#FF72E1] to-[#F54C7A]",
       foreground: "dark:from-[#FFFFFF] dark:to-[#4B4B4B]",
       raspberry: "from-[#EB145B] to-[#EB145B]",
-      beetroot: "from-[#AE1F4C] to-[#AE1F4C]", 
+      beetroot: "from-[#AE1F4C] to-[#AE1F4C]",
       cloudberry: "from-[#FF7900] to-[#FF7900]",
       currant: "from-[#15363F] to-[#15363F]",
       breeze: "from-[#11D1C6] to-[#11D1C6]",
