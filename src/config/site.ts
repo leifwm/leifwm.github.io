@@ -1,7 +1,9 @@
+import { localeUrl } from "@/i18n/locale";
+
 export const assetUrl = (path: string) =>
   `${import.meta.env.BASE_URL}${path.replace(/^\/+/, "")}`;
 
-export const routeUrl = assetUrl;
+export const routeUrl = localeUrl;
 
 export type SiteConfig = typeof siteConfig;
 
@@ -24,7 +26,7 @@ export const siteConfig = {
   ],
 
   navMenuItems: [
-      {
+    {
       label: "Home",
       href: "/",
     },

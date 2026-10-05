@@ -1,28 +1,23 @@
-"use client";
-
 import { useState } from "react";
 import { Link } from "@heroui/react";
 import clsx from "clsx";
 
-import { assetUrl, routeUrl, siteConfig } from "@/config/site";
+import { t } from "@/i18n/locale";
+import { routeUrl, siteConfig } from "@/config/site";
+import { LanguageSwitch } from "@/components/language-switch";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  LinkedIcon,
-  Logo,
-} from "@/components/icons";
+import { LinkedIcon, Logo } from "@/components/icons";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b border-separator bg-background/70 backdrop-blur-lg">
       <header className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-6">
         <div className="flex items-center gap-4">
-          <a className="flex items-center gap-2" href={assetUrl("/")}>
+          <a className="flex items-center gap-2" href={routeUrl("/")}>
             <Logo />
-            <p className="font-bold text-inherit">DESIGN</p>
+            <p className="font-bold text-inherit">{t("DESIGN")}</p>
           </a>
           <ul className="hidden lg:flex gap-4 ml-2">
             {siteConfig.navItems.map((item) => (
@@ -34,16 +29,16 @@ export const Navbar = () => {
                   )}
                   href={routeUrl(item.href)}
                 >
-                  {item.label}
+                  {t(item.label)}
                 </a>
               </li>
             ))}
           </ul>
         </div>
 
-        <div className="hidden sm:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <Link
-            aria-label="LinkedIn"
+            aria-label={t("LinkedIn")}
             href={siteConfig.links.linkedin}
             rel="noopener noreferrer"
             target="_blank"
@@ -51,16 +46,17 @@ export const Navbar = () => {
             <LinkedIcon className="text-muted" />
           </Link>
           <ThemeSwitch />
+          <LanguageSwitch />
 
-          <div className="hidden md:flex">
-          </div>
+          <div className="hidden md:flex" />
         </div>
 
-        <div className="flex sm:hidden items-center gap-2">
+        <div className="flex lg:hidden items-center gap-2">
+          <LanguageSwitch />
           <ThemeSwitch />
           <button
             aria-expanded={isMenuOpen}
-            aria-label="Toggle menu"
+            aria-label={t("Toggle menu")}
             className="p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -91,7 +87,7 @@ export const Navbar = () => {
       </header>
 
       {isMenuOpen && (
-        <div className="border-t border-separator sm:hidden">
+        <div className="border-t border-separator lg:hidden">
           <ul className="flex flex-col gap-2 px-4 pb-4">
             {siteConfig.navMenuItems.map((item, index) => (
               <li key={`${item.label}-${index}`}>
@@ -107,7 +103,7 @@ export const Navbar = () => {
                   href={routeUrl(item.href)}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.label}
+                  {t(item.label)}
                 </Link>
               </li>
             ))}

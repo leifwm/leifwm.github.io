@@ -33,16 +33,84 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
-.case-study__title { margin: 0; font-size: 2.25rem; font-weight: 600; letter-spacing: -0.025em; }
-.case-study__lead { margin-top: 1.5rem; color: var(--heroui-default-600); font-size: 1.25rem; line-height: 1.625; }
-.case-study__question, .case-study__quote { padding-left: 1.5rem; border-left: 2px solid currentColor; line-height: 1.625; }
-.case-study__question { margin-top: 2.5rem; font-size: 1.125rem; }
-.case-study__section { margin-bottom: 6rem; }
-.case-study__section-title { margin: 0 0 1rem; color: var(--heroui-default-500); font-size: 1.875rem; font-weight: 300; letter-spacing: 0.1em; }
-.case-study__section-content { color: var(--heroui-default-700); font-size: 1.125rem; line-height: 1.625; }
-.case-study__section-content > * + * { margin-top: 1.5rem; }
-.case-study__quote { margin: 2.5rem 0; font-size: 1.25rem; font-weight: 500; }
-.case-study__callout { margin: 2.5rem 0; padding: 1.25rem 1.5rem; border-radius: 0.5rem; background: var(--heroui-default-100); font-size: 1.125rem; font-weight: 500; }
+.case-study__title {
+  margin: 0;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+.case-study__lead {
+  margin-top: 1.5rem;
+  color: var(--heroui-default-600);
+  font-size: 1.25rem;
+  line-height: 1.625;
+}
+
+.case-study__question,
+.case-study__quote {
+  padding-left: 1.5rem;
+  border-left: 2px solid currentColor;
+  line-height: 1.625;
+}
+
+.case-study__question {
+  margin-top: 2.5rem;
+  font-size: 1.125rem;
+}
+
+.case-study__section {
+  margin-bottom: 6rem;
+}
+
+.case-study__section-title {
+  margin: 0 0 1rem;
+  color: var(--heroui-default-500);
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+.case-study__section-title--aloe {
+  --section-title-color: #39DD91;
+}
+
+.case-study__section-title--breeze {
+  --section-title-color: #11D1C6;
+}
+.case-study__section-title--cloludberry {
+  --section-title-color: #FF7900;
+}
+
+.case-study__section-title--breeze {
+  --section-title-color: #11D1C6;
+}
+
+
+.case-study__section-content {
+  color: var(--heroui-default-700);
+  font-size: 1.125rem;
+  line-height: 1.625;
+}
+
+.case-study__section-content>*+* {
+  margin-top: 1.5rem;
+}
+
+.case-study__quote {
+  margin: 2.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.case-study__callout {
+  margin: 2.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 0.5rem;
+  background: var(--heroui-default-100);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
 
 @media (min-width: 768px) {
   .case-study { padding-block: 6rem; }
@@ -53,3 +121,7 @@ body {
   /* Override dark theme colors */
   --background: #000000;
 }
+.language-switch { display: flex; align-items: center; gap: .4rem; font-size: .8125rem; font-weight: 600; padding-inline: .3rem; }
+.language-switch a { padding: .4rem .2rem; text-decoration: none; opacity: .65; }
+.language-switch a[aria-current] { opacity: 1; border-bottom: 2px solid #11d1c6; }
+.language-switch a:focus-visible { outline: 2px solid #ff7900; outline-offset: 2px; }

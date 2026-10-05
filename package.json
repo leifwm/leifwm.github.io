@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "postbuild": "node scripts/create-locale-entrypoints.mjs",
     "lint": "eslint --fix",
     "preview": "vite preview"
   },

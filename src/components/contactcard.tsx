@@ -8,7 +8,7 @@ export function ContactCard() {
     <Surface className="mx-auto m-10 w-80 rounded-2xl bg-background" variant="default">
       <h3 className="text-left text-4xl font-light text-foreground">Find me at:</h3>
       <p className="text-left text-4xl mt-4 font-light">
-        contact@leifwm.com
+        leifwm@gmail.com
       </p>
       <div className="flex ">
         <Link

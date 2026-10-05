@@ -8,6 +8,8 @@ import {
 } from "motion/react";
 import { useId, useRef, useState } from "react";
 
+import { t } from "@/i18n/locale";
+
 import "@/styles/ser-explorers.css";
 
 export type SerMindset = {
@@ -95,23 +97,23 @@ export function SerMindsetExplorer({
 
   return (
     <div
-      aria-label="Explore student mindsets"
+      aria-label={t("Explore student mindsets")}
       className="ser-mindsets ser-explorer"
       role="group"
     >
       <p className="ser-explorer__instruction">
-        Select a mindset to explore the support it calls for.
+        {t("Select a mindset to explore the support it calls for.")}
       </p>
       <div className="ser-mindsets__canvas">
         <div aria-hidden="true" className="ser-mindsets__motivation">
-          <span>Internal</span>
-          <span>Motivation</span>
-          <span>External</span>
+          <span>{t("Internal")}</span>
+          <span>{t("Motivation")}</span>
+          <span>{t("External")}</span>
         </div>
         <div aria-hidden="true" className="ser-mindsets__direction">
-          <span>Defined</span>
-          <span>Objective</span>
-          <span>Exploratory</span>
+          <span>{t("Defined")}</span>
+          <span>{t("Objective")}</span>
+          <span>{t("Exploratory")}</span>
         </div>
         <div className="ser-mindsets__grid">
           {items.map((item) => {
@@ -144,8 +146,14 @@ export function SerMindsetExplorer({
                 </span>
                 <span className="ser-mindsets__summary">{item.summary}</span>
                 <span className="ser-mindsets__axes">
-                  <span>Motivation: {item.motivation}</span>
-                  <span>Objective: {item.direction}</span>
+                  <span>
+                    {t("Motivation: ")}
+                    {item.motivation}
+                  </span>
+                  <span>
+                    {t("Objective: ")}
+                    {item.direction}
+                  </span>
                 </span>
               </button>
             );
@@ -162,7 +170,7 @@ export function SerMindsetExplorer({
               <div className="ser-explorer__detail-heading">
                 <h3 id={headingId}>{selected.title}</h3>
                 <button
-                  aria-label={`Close ${selected.title} details`}
+                  aria-label={t("Close {0} details", [selected.title])}
                   className="ser-explorer__close"
                   type="button"
                   onClick={close}
@@ -174,7 +182,9 @@ export function SerMindsetExplorer({
               <div className="ser-explorer__detail-columns">
                 <p>{selected.description}</p>
                 <div>
-                  <p className="ser-explorer__label">Design implication</p>
+                  <p className="ser-explorer__label">
+                    {t("Design implication")}
+                  </p>
                   <p>{selected.implication}</p>
                 </div>
               </div>
@@ -209,15 +219,17 @@ export function SerStrategyExplorer({
 
   return (
     <div
-      aria-label="Explore experience strategy"
+      aria-label={t("Explore experience strategy")}
       className="ser-strategy ser-explorer"
       role="group"
     >
       <p className="ser-explorer__instruction">
-        Explore four pillars, from everyday essentials to a wider community.
+        {t(
+          "Explore four pillars, from everyday essentials to a wider community.",
+        )}
       </p>
       <ol
-        aria-label="Experience strategy pillars"
+        aria-label={t("Experience strategy pillars")}
         className="ser-strategy__layers"
       >
         {items.map((item) => {
@@ -261,7 +273,7 @@ export function SerStrategyExplorer({
                       <div className="ser-explorer__detail-heading">
                         <h3 id={headingId}>{item.title}</h3>
                         <button
-                          aria-label={`Close ${item.title} details`}
+                          aria-label={t("Close {0} details", [item.title])}
                           className="ser-explorer__close"
                           type="button"
                           onClick={close}
@@ -272,12 +284,14 @@ export function SerStrategyExplorer({
                       </div>
                       <div className="ser-explorer__detail-columns">
                         <div>
-                          <p className="ser-explorer__label">Student need</p>
+                          <p className="ser-explorer__label">
+                            {t("Student need")}
+                          </p>
                           <p>{item.need}</p>
                         </div>
                         <div>
                           <p className="ser-explorer__label">
-                            Experience response
+                            {t("Experience response")}
                           </p>
                           <p>{item.response}</p>
                         </div>
@@ -285,7 +299,7 @@ export function SerStrategyExplorer({
                       {item.services.length > 0 && (
                         <div className="ser-strategy__services">
                           <p className="ser-explorer__label">
-                            Service opportunities
+                            {t("Service opportunities")}
                           </p>
                           <ul>
                             {item.services.map((service) => (

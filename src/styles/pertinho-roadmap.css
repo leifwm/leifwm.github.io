@@ -1,0 +1,26 @@
+.pertinho-roadmap__intro { max-width: var(--ser-reading-width); color: var(--ser-muted); margin-bottom: 2rem !important; font-size: 1.125rem; }
+.pertinho-roadmap__releases { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.75rem; }
+.pertinho-roadmap__release { min-width: 0; border-top: 3px solid var(--portfolio-breeze); padding-top: 1.5rem; display: flex; flex-direction: column; }
+.pertinho-roadmap__release header { min-height: 8.5rem; }
+.pertinho-roadmap__release .ser-case__eyebrow { font-size: .875rem; }
+.pertinho-roadmap__release h3 { margin-top: 1rem; font-size: 1.7rem; line-height: 1.2; font-weight: 500; letter-spacing: -.03em; }
+.pertinho-roadmap__goals { padding-block: 1.5rem 2rem; min-height: 25rem; }
+.pertinho-roadmap__goals > div + div { margin-top: 1.5rem; }
+.pertinho-roadmap h4 { font-size: .9375rem; font-weight: 600; line-height: 1.4; }
+.pertinho-roadmap__goals p { margin-top: .6rem; color: var(--ser-muted); font-size: 1rem; line-height: 1.6; }
+.pertinho-roadmap__capabilities { display: grid; grid-template-columns: 1fr; gap: 1.75rem; }
+.pertinho-roadmap__side { border-top: 2px solid var(--ser-accent); padding-top: 1rem; }
+.pertinho-roadmap__side--buyer { border-color: var(--portfolio-breeze); }
+.pertinho-roadmap__side ul { padding: 0; margin: 1rem 0 0; list-style: none; }
+.pertinho-roadmap__side li { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem; padding-block: .6rem; border-bottom: 1px solid var(--ser-line); font-size: .9375rem; line-height: 1.4; }
+.pertinho-roadmap__side li span { color: var(--ser-accent); font-size: .75rem; flex-shrink: 0; }
+@media (max-width: 1000px) {
+  .pertinho-roadmap__releases { grid-template-columns: 1fr; gap: 3rem; }
+  .pertinho-roadmap__release header { min-height: 0; }
+  .pertinho-roadmap__goals { min-height: 0; }
+  .pertinho-roadmap__goals, .pertinho-roadmap__capabilities { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .pertinho-roadmap__goals > div + div { margin-top: 0; }
+}
+@media (max-width: 500px) {
+  .pertinho-roadmap__goals, .pertinho-roadmap__capabilities { grid-template-columns: 1fr; gap: 1.5rem; }
+}

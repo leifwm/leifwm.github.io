@@ -1,0 +1,30 @@
+.project-case__figure { margin-top: 3rem !important; }
+.project-case__figure img { object-fit: contain; }
+.project-case__facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; padding-block: 2rem; border-block: 1px solid var(--ser-line); margin-bottom: 3rem; }
+.project-case__facts strong { display: block; color: var(--ser-accent); font-size: clamp(2.5rem, 4vw, 4rem); line-height: 1.2; font-weight: 500; }
+.project-case__facts span { display: block; font-size: 1rem; margin-top: .75rem; color: var(--ser-muted); }
+.project-case__explorer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.7fr); border-block: 1px solid var(--ser-line); }
+.project-case__choices { padding-right: 2rem; }
+.project-case__choices button { display: flex; align-items: center; gap: 1rem; text-align: left; width: 100%; background: transparent; color: var(--ser-muted); border: 0; border-bottom: 1px solid var(--ser-line); padding: 1.5rem .75rem; font-size: 1.125rem; line-height: 1.45; }
+.project-case__choices button span { font-size: .875rem; color: var(--ser-accent); }
+.project-case__choices button[aria-pressed="true"] { color: var(--ser-accent); background: var(--ser-tint); box-shadow: inset 3px 0 var(--ser-accent); }
+.project-case__detail { min-width: 0; padding: 2rem 0 2rem 2rem; border-left: 1px solid var(--ser-line); }
+.project-case__detail h3 { margin-block: 1rem 1.5rem; font-size: clamp(1.6rem, 2.5vw, 2.25rem); line-height: 1.2; font-weight: 500; }
+.project-case__detail > p:not(.ser-case__label) { color: var(--ser-muted); }
+.project-case__implication { margin-top: 2rem; padding-left: 1.5rem; border-left: 3px solid var(--portfolio-cloudberry); }
+.project-case__implication p + p { margin-top: .75rem; }
+.project-case__detail img { margin-top: 2rem; }
+.project-case__cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
+.project-case__cards > div { padding-top: 1.5rem; border-top: 1px solid var(--ser-line); }
+.project-case__cards h3 { font-size: 1.4rem; font-weight: 500; line-height: 1.3; }
+.project-case__cards p { margin-top: 1rem; color: var(--ser-muted); }
+.project-case__quote { margin: 3rem 0; padding-left: 1.5rem; border-left: 3px solid var(--portfolio-cloudberry); font-size: clamp(1.5rem, 2.5vw, 2rem); line-height: 1.4; }
+.project-case__closing { border-top: 1px solid var(--ser-line); margin-bottom: 3rem; }
+@media (max-width: 700px) {
+  .project-case :is(header, section)[id] { scroll-margin-top: 11rem; }
+  .project-case__explorer, .project-case__cards { grid-template-columns: 1fr; }
+  .project-case__choices { padding-right: 0; }
+  .project-case__detail { padding: 2rem 0; border-left: 0; }
+  .project-case__facts { gap: 1rem; }
+  .project-case__facts strong { font-size: 2rem; }
+}

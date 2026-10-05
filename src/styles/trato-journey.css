@@ -554,6 +554,11 @@
     height: 0.5rem;
   }
 }
+@media (max-width: 600px) {
+  .trato-journey__map { min-width: 0; }
+  .trato-journey__disruption { position: static; transform: none; width: 100%; max-width: 100%; box-sizing: border-box; }
+  .trato-journey__disruption .trato-journey__moment { width: 100%; min-width: 0; }
+}
 
 @container trato-journey (max-width: 599px) {
   .trato-journey__filter {
@@ -660,4 +665,7 @@
 
 @container trato-journey (max-width: 999px) {
   .trato-journey__map::after { display: none; }
+  .trato-journey__disruption { min-width: 0; max-width: 100%; }
+  .trato-journey__branch-label { white-space: normal; }
+  .trato-journey__disruption .trato-journey__moment { min-width: 0; width: 100%; overflow-wrap: anywhere; }
 }

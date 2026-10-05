@@ -2,6 +2,7 @@ import type { CSSProperties, ReactNode } from "react";
 
 import { useEffect, useState } from "react";
 
+import { t } from "@/i18n/locale";
 import TratoJourney from "@/components/trato-journey";
 import { portfolioColors } from "@/components/primitives";
 import { assetUrl, routeUrl } from "@/config/site";
@@ -9,13 +10,13 @@ import DefaultLayout from "@/layouts/default";
 import "@/styles/trato-v2.css";
 
 const chapters = [
-  { id: "project", label: "The project" },
-  { id: "role", label: "My role" },
-  { id: "results", label: "Results" },
-  { id: "research", label: "Research" },
-  { id: "journey", label: "The journey" },
-  { id: "concepts", label: "Concepts" },
-  { id: "prototypes", label: "Prototypes" },
+  { id: "project", label: t("The project") },
+  { id: "role", label: t("My role") },
+  { id: "results", label: t("Results") },
+  { id: "research", label: t("Research") },
+  { id: "journey", label: t("The journey") },
+  { id: "concepts", label: t("Concepts") },
+  { id: "prototypes", label: t("Prototypes") },
 ];
 
 const paletteStyles = Object.fromEntries(
@@ -28,93 +29,123 @@ const paletteStyles = Object.fromEntries(
 const researchInsights = [
   {
     number: "01",
-    title: "Trust traveled through the community.",
-    finding:
+    title: t("Trust traveled through the community."),
+    finding: t(
       "Drivers turned to familiar WhatsApp groups for freight, advice and road information. An unfamiliar app had to earn that trust.",
-    decision:
+    ),
+    decision: t(
       "Build on existing habits through WhatsApp integration, peer reviews and clear information about providers.",
+    ),
   },
   {
     number: "02",
-    title: "Every trip carried uncertainty.",
-    finding:
+    title: t("Every trip carried uncertainty."),
+    finding: t(
       "Thin margins, unpredictable repairs and the search for a return load made planning a constant concern.",
-    decision:
+    ),
+    decision: t(
       "Support the whole trip, connecting freight planning with fuel, maintenance and financial needs.",
+    ),
   },
   {
     number: "03",
-    title: "Information had to work on the road.",
-    finding:
+    title: t("Information had to work on the road."),
+    finding: t(
       "Fuel prices, service recommendations and route information were useful only when drivers could access and trust them.",
-    decision:
+    ),
+    decision: t(
       "Treat accurate information and offline access as core requirements of the service.",
+    ),
   },
 ];
 
 const demonstrations = [
   {
     id: "freight",
-    label: "Freight search",
-    status: "Prototype",
-    title: "Help drivers judge the next load.",
-    description:
+    label: t("Freight search"),
+    status: t("Prototype"),
+    title: t("Help drivers judge the next load."),
+    description: t(
       "A freight search experience for finding and evaluating opportunities before committing to a trip.",
+    ),
     file: "Trato_Fretes_Prototipo.webm",
     poster: "freight-preview.jpg",
     walkthrough: [
-      "Browse freight cards with origin, destination, cargo, distance, price and company ratings. Switch between one-way, return-trip and continuous freight options.",
-      "Open an offer to inspect the carrier, payment methods and payment timing, vehicle requirements, reviews and a WhatsApp contact option.",
-      "Compare an alternative carrier and select an offer to continue.",
+      t(
+        "Browse freight cards with origin, destination, cargo, distance, price and company ratings. Switch between one-way, return-trip and continuous freight options.",
+      ),
+      t(
+        "Open an offer to inspect the carrier, payment methods and payment timing, vehicle requirements, reviews and a WhatsApp contact option.",
+      ),
+      t("Compare an alternative carrier and select an offer to continue."),
     ],
-    finding:
+    finding: t(
       "Participants wanted pickup location first, written comments alongside company ratings, and expected loading and unloading times.",
-    implication:
+    ),
+    implication: t(
       "Make the information needed to evaluate a load easier to find. Testing also showed that the proposition needed clearer differentiation from competitors.",
-    summary:
+    ),
+    summary: t(
       "Silent walkthrough of the freight-search prototype, showing how a driver explores available freight and its details.",
+    ),
   },
   {
     id: "map",
-    label: "Social map",
-    status: "Prototype",
-    title: "Bring knowledge from the road into view.",
-    description:
+    label: t("Social map"),
+    status: t("Prototype"),
+    title: t("Bring knowledge from the road into view."),
+    description: t(
       "A map concept bringing useful stops, services and community knowledge into the driver’s journey.",
+    ),
     file: "Trato_Mapa_Prototipo.webm",
     poster: "map-preview.jpg",
     walkthrough: [
-      "Follow a route with fuel stations marked along the way.",
-      "Select a station to see its distance, rating, facilities and Trato fuel benefit.",
-      "Expand the station details to compare listed and discounted fuel prices, read driver reviews and access directions.",
+      t("Follow a route with fuel stations marked along the way."),
+      t(
+        "Select a station to see its distance, rating, facilities and Trato fuel benefit.",
+      ),
+      t(
+        "Expand the station details to compare listed and discounted fuel prices, read driver reviews and access directions.",
+      ),
     ],
-    finding:
+    finding: t(
       "Accurate fuel prices and offline access were central to the map’s usefulness. Drivers valued contributions from peers, provided the information was dependable.",
-    implication:
+    ),
+    implication: t(
       "Make information freshness visible and support access in areas with intermittent connectivity.",
-    summary:
+    ),
+    summary: t(
       "Silent walkthrough of the social-map prototype, demonstrating the exploration of locations and services along the road.",
+    ),
   },
   {
     id: "tires",
-    label: "Tire subscription",
-    status: "Service concept",
-    title: "Make a major expense easier to plan.",
-    description:
+    label: t("Tire subscription"),
+    status: t("Service concept"),
+    title: t("Make a major expense easier to plan."),
+    description: t(
       "A subscription proposition exploring more predictable access to tire replacement, demonstrated through a prototype.",
+    ),
     file: "Trato_Prototipo_Assinatura_Pneu.webm",
     poster: "tires-preview.jpg",
     walkthrough: [
-      "Choose preferred tire brands in the first step of the subscription flow.",
-      "Specify tire characteristics, including rim size, profile and width.",
-      "Compare plans showing the number of tires, monthly price and commitment duration before continuing.",
+      t(
+        "Choose preferred tire brands in the first step of the subscription flow.",
+      ),
+      t("Specify tire characteristics, including rim size, profile and width."),
+      t(
+        "Compare plans showing the number of tires, monthly price and commitment duration before continuing.",
+      ),
     ],
-    finding:
+    finding: t(
       "Concept testing showed interest in planning tire purchases at a more accessible price, even with a commitment period and cancellation fee.",
-    implication:
+    ),
+    implication: t(
       "Develop the offer around predictable replacement costs and transparent terms. This finding concerns the service proposition, rather than the usability of this screen flow.",
-    summary:
+    ),
+    summary: t(
       "Silent prototype walkthrough illustrating the tire-subscription service concept and its offer.",
+    ),
   },
 ];
 
@@ -124,7 +155,7 @@ export default function TratoV2Page() {
   useEffect(() => {
     const previousTitle = document.title;
 
-    document.title = "Trato — Research & Service Design | Leif Magalhães";
+    document.title = t("Trato — Research & Service Design | Leif Magalhães");
 
     let observer: IntersectionObserver;
 
@@ -142,7 +173,7 @@ export default function TratoV2Page() {
           if (visible) setActiveChapter(visible.target.id);
         },
         {
-          rootMargin: `-${topMargin}px 0px -${bottomMargin}px 0px`,
+          rootMargin: t("-{0}px 0px -{1}px 0px", [topMargin, bottomMargin]),
           threshold: 0,
         },
       );
@@ -169,13 +200,13 @@ export default function TratoV2Page() {
       <article className="trato-v2" style={paletteStyles}>
         <div className="trato-v2__layout">
           <nav
-            aria-label="Case study chapters"
+            aria-label={t("Case study chapters")}
             className="trato-v2__chapter-nav"
           >
-            <p className="trato-v2__nav-title">Contents</p>
+            <p className="trato-v2__nav-title">{t("Contents")}</p>
             <div className="trato-v2__nav-items">
               <div className="trato-v2__nav-group">
-                <p className="trato-v2__nav-label">Overview</p>
+                <p className="trato-v2__nav-label">{t("Overview")}</p>
                 {chapters.slice(0, 3).map((chapter) => (
                   <a
                     key={chapter.id}
@@ -190,7 +221,7 @@ export default function TratoV2Page() {
               </div>
               <hr className="trato-v2__nav-separator" />
               <div className="trato-v2__nav-group">
-                <p className="trato-v2__nav-label">In depth</p>
+                <p className="trato-v2__nav-label">{t("In depth")}</p>
                 {chapters.slice(3).map((chapter) => (
                   <a
                     key={chapter.id}
@@ -207,33 +238,33 @@ export default function TratoV2Page() {
           </nav>
           <div className="trato-v2__content">
             <div className="trato-v2__version trato-v2__wrap">
-              <a href={routeUrl("/#projects")}>← All projects</a>
+              <a href={routeUrl("/#projects")}>{t("← All projects")}</a>
             </div>
 
             <header className="trato-v2__hero trato-v2__wrap" id="project">
               <div className="trato-v2__hero-copy">
                 <p className="trato-v2__eyebrow">
-                  VLI / Trato · Service & product design
+                  {t("VLI / Trato · Service & product design")}
                 </p>
                 <h1>
-                  Beyond the
+                  {t("Beyond the")}
                   <br />
-                  next cargo.
+                  {t("next cargo.")}
                 </h1>
                 <p className="trato-v2__lead">
-                  Expanding a freight app into a service vision for life on the
-                  road.
+                  {t(
+                    "Expanding a freight app into a service vision for life on the road.",
+                  )}
                 </p>
                 <p>
-                  Trato began as VLI’s pilot app connecting truck drivers with
-                  its logistics infrastructure. As the team explored expansion,
-                  we asked how it could support drivers across more of their
-                  working lives.
+                  {t(
+                    "Trato began as VLI’s pilot app connecting truck drivers with its logistics infrastructure. As the team explored expansion, we asked how it could support drivers across more of their working lives.",
+                  )}
                 </p>
               </div>
               <figure className="trato-v2__cover">
                 <img
-                  alt="A Trato-branded truck on a highway at sunset"
+                  alt={t("A Trato-branded truck on a highway at sunset")}
                   fetchPriority="high"
                   height={1144}
                   src={assetUrl("/assets/img/trato_imgs/trato_cover.jpg")}
@@ -244,37 +275,44 @@ export default function TratoV2Page() {
 
             <section className="trato-v2__section trato-v2__wrap" id="role">
               <SectionHeading
-                eyebrow="01 / My role"
-                title="From understanding drivers to shaping the service."
+                eyebrow={t("01 / My role")}
+                title={t("From understanding drivers to shaping the service.")}
               />
               <div className="trato-v2__role">
                 <div>
                   <h3>
-                    Lead Researcher
-                    <br />& Junior Product Designer
+                    {t("Lead Researcher")}
+                    <br />
+                    {t("& Junior Product Designer")}
                   </h3>
                   <p>
-                    I led the research and worked with a product designer to
-                    turn what we learned into concepts, prototypes and a service
-                    roadmap.
+                    {t(
+                      "I led the research and worked with a product designer to turn what we learned into concepts, prototypes and a service roadmap.",
+                    )}
                   </p>
                 </div>
                 <div>
-                  <p className="trato-v2__label">I led</p>
+                  <p className="trato-v2__label">{t("I led")}</p>
                   <ul>
-                    <li>Participant profiling and research planning</li>
+                    <li>{t("Participant profiling and research planning")}</li>
                     <li>
-                      Interviews, WhatsApp diaries and community observation
+                      {t(
+                        "Interviews, WhatsApp diaries and community observation",
+                      )}
                     </li>
-                    <li>Synthesis of behaviors, needs and opportunities</li>
+                    <li>
+                      {t("Synthesis of behaviors, needs and opportunities")}
+                    </li>
                   </ul>
                 </div>
                 <div>
-                  <p className="trato-v2__label">I co-created</p>
+                  <p className="trato-v2__label">{t("I co-created")}</p>
                   <ul>
-                    <li>Service concepts and value-proposition tests</li>
-                    <li>The journey map, flows and high-fidelity prototypes</li>
-                    <li>Remote UX tests and a service roadmap</li>
+                    <li>{t("Service concepts and value-proposition tests")}</li>
+                    <li>
+                      {t("The journey map, flows and high-fidelity prototypes")}
+                    </li>
+                    <li>{t("Remote UX tests and a service roadmap")}</li>
                   </ul>
                 </div>
               </div>
@@ -284,46 +322,52 @@ export default function TratoV2Page() {
               <div className="trato-v2__wrap trato-v2__results-grid">
                 <div>
                   <SectionHeading
-                    eyebrow="02 / Results"
-                    title="A shared direction for Trato’s next chapter."
+                    eyebrow={t("02 / Results")}
+                    title={t("A shared direction for Trato’s next chapter.")}
                   />
                   <p>
-                    The project connected customer understanding to a broader
-                    service strategy.
+                    {t(
+                      "The project connected customer understanding to a broader service strategy.",
+                    )}
                   </p>
                   <ul className="trato-v2__deliverables">
                     <li>
-                      <span>01</span>A service vision spanning six connected
-                      areas
+                      <span>01</span>
+                      {t("A service vision spanning six connected areas")}
                     </li>
                     <li>
-                      <span>02</span>Tested propositions and prototypes to
-                      inform decisions
+                      <span>02</span>
+                      {t(
+                        "Tested propositions and prototypes to inform decisions",
+                      )}
                     </li>
                     <li>
-                      <span>03</span>A journey-based roadmap for future services
+                      <span>03</span>
+                      {t("A journey-based roadmap for future services")}
                     </li>
                   </ul>
                 </div>
                 <div className="trato-v2__outcome">
-                  <p className="trato-v2__label">Later platform results</p>
+                  <p className="trato-v2__label">
+                    {t("Later platform results")}
+                  </p>
                   <p className="trato-v2__metric">
-                    1.4<span>million</span>
+                    1.4<span>{t("million")}</span>
                   </p>
                   <p className="trato-v2__metric-label">
-                    tonnes of road freight orchestrated through Trato
+                    {t("tonnes of road freight orchestrated through Trato")}
                   </p>
                   <p className="trato-v2__source-note">
-                    VLI’s reported platform-wide results describe Trato’s
-                    subsequent growth. The project’s direct contribution was the
-                    research, service vision, concepts and roadmap.
+                    {t(
+                      "VLI’s reported platform-wide results describe Trato’s subsequent growth. The project’s direct contribution was the research, service vision, concepts and roadmap.",
+                    )}
                   </p>
                   <a
                     href="https://www.vli-logistica.com.br/inovacao/"
                     rel="noreferrer"
                     target="_blank"
                   >
-                    Source: VLI’s innovation report ↗
+                    {t("Source: VLI’s innovation report ↗")}
                   </a>
                 </div>
               </div>
@@ -333,23 +377,28 @@ export default function TratoV2Page() {
               aria-labelledby="trato-deep-dive-title"
               className="trato-v2__deep-dive"
             >
-              <p className="trato-v2__label">In depth / The full story</p>
-              <h2 id="trato-deep-dive-title">Inside the project.</h2>
+              <p className="trato-v2__label">
+                {t("In depth / The full story")}
+              </p>
+              <h2 id="trato-deep-dive-title">{t("Inside the project.")}</h2>
               <p>
-                The research, decisions and explorations that shaped the
-                service.
+                {t(
+                  "The research, decisions and explorations that shaped the service.",
+                )}
               </p>
             </section>
 
             <section className="trato-v2__section trato-v2__wrap" id="research">
               <SectionHeading
-                eyebrow="03 / Research"
-                title="Start with the people behind the freight."
+                eyebrow={t("03 / Research")}
+                title={t("Start with the people behind the freight.")}
               />
               <div className="trato-v2__research-intro">
                 <figure>
                   <img
-                    alt="A truck unloading agricultural cargo, illustrating the work around a freight journey"
+                    alt={t(
+                      "A truck unloading agricultural cargo, illustrating the work around a freight journey",
+                    )}
                     loading="lazy"
                     src={assetUrl("/assets/img/trato_imgs/Truck1.jpg")}
                   />
@@ -358,49 +407,52 @@ export default function TratoV2Page() {
                   <div className="trato-v2__research-facts">
                     <div>
                       <strong>11</strong>
-                      <span>drivers interviewed</span>
+                      <span>{t("drivers interviewed")}</span>
                     </div>
                     <div>
-                      <strong>4 days</strong>
-                      <span>of WhatsApp diaries</span>
+                      <strong>{t("4 days")}</strong>
+                      <span>{t("of WhatsApp diaries")}</span>
                     </div>
                   </div>
                   <p>
-                    I shaped participant profiles around cargo and vehicle
-                    characteristics, tailored the interviews and diary prompts,
-                    and observed driver communities.
+                    {t(
+                      "I shaped participant profiles around cargo and vehicle characteristics, tailored the interviews and diary prompts, and observed driver communities.",
+                    )}
                   </p>
                   <p>
-                    We explored the practical realities of freight, money,
-                    maintenance, safety and time away from home.
+                    {t(
+                      "We explored the practical realities of freight, money, maintenance, safety and time away from home.",
+                    )}
                   </p>
                   <details className="trato-v2__details">
-                    <summary>Research approach and limitations</summary>
+                    <summary>{t("Research approach and limitations")}</summary>
                     <p>
-                      The study included eight agricultural-cargo drivers and
-                      three ore drivers. Interviews, diaries and comparative
-                      concept tests were conducted remotely during the pandemic.
+                      {t(
+                        "The study included eight agricultural-cargo drivers and three ore drivers. Interviews, diaries and comparative concept tests were conducted remotely during the pandemic.",
+                      )}
                     </p>
                     <p>
-                      Remote recruitment may have favored drivers already
-                      comfortable with digital services. I organized and
-                      cataloged the findings in Optimal Workshop.
+                      {t(
+                        "Remote recruitment may have favored drivers already comfortable with digital services. I organized and cataloged the findings in Optimal Workshop.",
+                      )}
                     </p>
                   </details>
                 </div>
               </div>
               <div className="trato-v2__insight-statement">
                 <p className="trato-v2__eyebrow">
-                  The finding that changed the brief
+                  {t("The finding that changed the brief")}
                 </p>
                 <p>
-                  For these drivers, freight apps were often{" "}
-                  <em>plan&nbsp;B.</em>
+                  {t("For these drivers, freight apps were often")}{" "}
+                  <em>{t("plan&nbsp;B.")}</em>
                   <br />
-                  Trusted relationships came first.
+                  {t("Trusted relationships came first.")}
                 </p>
                 <span>
-                  Research synthesis · WhatsApp was already part of the job.
+                  {t(
+                    "Research synthesis · WhatsApp was already part of the job.",
+                  )}
                 </span>
               </div>
               <div className="trato-v2__insights">
@@ -414,7 +466,7 @@ export default function TratoV2Page() {
                       <p>{insight.finding}</p>
                     </div>
                     <div>
-                      <p className="trato-v2__label">Design direction</p>
+                      <p className="trato-v2__label">{t("Design direction")}</p>
                       <p>{insight.decision}</p>
                     </div>
                   </div>
@@ -425,18 +477,18 @@ export default function TratoV2Page() {
             <section className="trato-v2__journey-section" id="journey">
               <div className="trato-v2__wrap">
                 <SectionHeading
-                  eyebrow="04 / Mapping the opportunity"
-                  title="One journey. Many moments of need."
+                  eyebrow={t("04 / Mapping the opportunity")}
+                  title={t("One journey. Many moments of need.")}
                 >
                   <p>
-                    The journey connected freight with the rest of a driver’s
-                    life: preparing, traveling, getting paid, maintaining the
-                    truck and making time for home.
+                    {t(
+                      "The journey connected freight with the rest of a driver’s life: preparing, traveling, getting paid, maintaining the truck and making time for home.",
+                    )}
                   </p>
                 </SectionHeading>
                 <TratoJourney />
                 <details className="trato-v2__details trato-v2__original-maps">
-                  <summary>Explore the original journey maps</summary>
+                  <summary>{t("Explore the original journey maps")}</summary>
                   <div>
                     <figure>
                       <a
@@ -447,7 +499,9 @@ export default function TratoV2Page() {
                         target="_blank"
                       >
                         <img
-                          alt="Original Portuguese journey map: a recurring freight cycle with a road-problem branch and time-off activities"
+                          alt={t(
+                            "Original Portuguese journey map: a recurring freight cycle with a road-problem branch and time-off activities",
+                          )}
                           loading="lazy"
                           src={assetUrl(
                             "/assets/img/trato_imgs/journey_trato.jpg",
@@ -464,7 +518,9 @@ export default function TratoV2Page() {
                         target="_blank"
                       >
                         <img
-                          alt="Original journey with six colored service layers: tires, marketplace, finance, social map, fuel and freight"
+                          alt={t(
+                            "Original journey with six colored service layers: tires, marketplace, finance, social map, fuel and freight",
+                          )}
                           loading="lazy"
                           src={assetUrl(
                             "/assets/img/trato_imgs/journey_trato2.jpg",
@@ -479,19 +535,18 @@ export default function TratoV2Page() {
 
             <section className="trato-v2__section trato-v2__wrap" id="concepts">
               <SectionHeading
-                eyebrow="05 / Testing the value"
-                title="Make the proposition concrete."
+                eyebrow={t("05 / Testing the value")}
+                title={t("Make the proposition concrete.")}
               >
                 <p>
-                  We used everyday scenarios to compare service offers with
-                  drivers. Fuel benefits, financial services and tire
-                  replacement became choices they could weigh against their own
-                  routines.
+                  {t(
+                    "We used everyday scenarios to compare service offers with drivers. Fuel benefits, financial services and tire replacement became choices they could weigh against their own routines.",
+                  )}
                 </p>
               </SectionHeading>
               <FuelComparison />
               <details className="trato-v2__details">
-                <summary>View the original comparison cards</summary>
+                <summary>{t("View the original comparison cards")}</summary>
                 <figure>
                   <a
                     href={assetUrl(
@@ -501,7 +556,9 @@ export default function TratoV2Page() {
                     target="_blank"
                   >
                     <img
-                      alt="Portuguese concept-test cards comparing fuel benefits, financial services, insurance and ways to receive stop recommendations"
+                      alt={t(
+                        "Portuguese concept-test cards comparing fuel benefits, financial services, insurance and ways to receive stop recommendations",
+                      )}
                       loading="lazy"
                       src={assetUrl(
                         "/assets/img/trato_imgs/trato_service_concepts.jpg",
@@ -515,14 +572,13 @@ export default function TratoV2Page() {
             <section className="trato-v2__prototype-section" id="prototypes">
               <div className="trato-v2__wrap">
                 <SectionHeading
-                  eyebrow="06 / Concepts & prototypes"
-                  title="Bring the service into the driver’s hands."
+                  eyebrow={t("06 / Concepts & prototypes")}
+                  title={t("Bring the service into the driver’s hands.")}
                 >
                   <p>
-                    I co-created flows and high-fidelity prototypes in Adobe XD
-                    and supported remote UX testing through Lookback. Each
-                    exploration connected a service proposition to a concrete
-                    experience.
+                    {t(
+                      "I co-created flows and high-fidelity prototypes in Adobe XD and supported remote UX testing through Lookback. Each exploration connected a service proposition to a concrete experience.",
+                    )}
                   </p>
                 </SectionHeading>
                 <PrototypeExplorer />
@@ -531,37 +587,39 @@ export default function TratoV2Page() {
 
             <section className="trato-v2__section trato-v2__wrap trato-v2__closing">
               <SectionHeading
-                eyebrow="07 / Bringing it together"
-                title="A roadmap built around the driver."
+                eyebrow={t("07 / Bringing it together")}
+                title={t("A roadmap built around the driver.")}
               >
                 <p>
-                  We brought the research, journey and service propositions into
-                  a shared direction for Trato Care: freight, fuel, tires,
-                  financial services, a social map and a marketplace.
+                  {t(
+                    "We brought the research, journey and service propositions into a shared direction for Trato Care: freight, fuel, tires, financial services, a social map and a marketplace.",
+                  )}
                 </p>
               </SectionHeading>
               <div
-                aria-label="Six experience principles"
+                aria-label={t("Six experience principles")}
                 className="trato-v2__principles"
               >
                 {[
-                  "Belonging",
-                  "Recognition",
-                  "Transparency",
-                  "Autonomy",
-                  "Safety",
-                  "Predictability",
+                  t("Belonging"),
+                  t("Recognition"),
+                  t("Transparency"),
+                  t("Autonomy"),
+                  t("Safety"),
+                  t("Predictability"),
                 ].map((principle) => (
                   <span key={principle}>{principle}</span>
                 ))}
               </div>
               <p className="trato-v2__reflection">
-                The central lesson: a useful service had to fit the
-                relationships, responsibilities and uncertainty drivers already
-                navigated every day.
+                {t(
+                  "The central lesson: a useful service had to fit the relationships, responsibilities and uncertainty drivers already navigated every day.",
+                )}
               </p>
               <div className="trato-v2__end-links">
-                <a href={routeUrl("/#projects")}>Back to all projects →</a>
+                <a href={routeUrl("/#projects")}>
+                  {t("Back to all projects →")}
+                </a>
               </div>
             </section>
           </div>
@@ -600,14 +658,14 @@ function FuelComparison() {
 
   return (
     <div className="trato-v2__comparison">
-      <p className="trato-v2__label">Try a question from the research</p>
+      <p className="trato-v2__label">{t("Try a question from the research")}</p>
       <h3>
-        You spend R$7,000 a month on fuel.
+        {t("You spend R$7,000 a month on fuel.")}
         <br />
-        Which benefit would you choose?
+        {t("Which benefit would you choose?")}
       </h3>
       <div
-        aria-label="Compare two fuel benefits"
+        aria-label={t("Compare two fuel benefits")}
         className="trato-v2__choices"
         role="group"
       >
@@ -616,15 +674,15 @@ function FuelComparison() {
           type="button"
           onClick={() => choose("cashback")}
         >
-          <span className="trato-v2__label">Option A</span>
-          <strong>4% cashback</strong>
+          <span className="trato-v2__label">{t("Option A")}</span>
+          <strong>{t("4% cashback")}</strong>
           <span>
-            Accumulates during the month.
+            {t("Accumulates during the month.")}
             <br />
-            Available to withdraw at month’s end.
+            {t("Available to withdraw at month’s end.")}
           </span>
           <span className="trato-v2__choice-action">
-            {choice === "cashback" ? "Selected ✓" : "Choose cashback →"}
+            {choice === "cashback" ? t("Selected ✓") : t("Choose cashback →")}
           </span>
         </button>
         <button
@@ -632,30 +690,31 @@ function FuelComparison() {
           type="button"
           onClick={() => choose("discount")}
         >
-          <span className="trato-v2__label">Option B</span>
-          <strong>2% discount</strong>
+          <span className="trato-v2__label">{t("Option B")}</span>
+          <strong>{t("2% discount")}</strong>
           <span>
-            Applied immediately,
+            {t("Applied immediately,")}
             <br />
-            each time you refuel.
+            {t("each time you refuel.")}
           </span>
           <span className="trato-v2__choice-action">
-            {choice === "discount" ? "Selected ✓" : "Choose a discount →"}
+            {choice === "discount" ? t("Selected ✓") : t("Choose a discount →")}
           </span>
         </button>
       </div>
       <div aria-live="polite" className="trato-v2__comparison-result">
         {revealed ? (
           <>
-            <p className="trato-v2__label">What the research revealed</p>
+            <p className="trato-v2__label">{t("What the research revealed")}</p>
             <p>
-              Participants prioritized the overall financial benefit, even when
-              they had to wait to use it. The value of the offer mattered more
-              than its format.
+              {t(
+                "Participants prioritized the overall financial benefit, even when they had to wait to use it. The value of the offer mattered more than its format.",
+              )}
             </p>
             <p className="trato-v2__source-note">
-              A qualitative finding across the fuel concept tests. Your
-              selection is a way to explore the question and is not recorded.
+              {t(
+                "A qualitative finding across the fuel concept tests. Your selection is a way to explore the question and is not recorded.",
+              )}
             </p>
           </>
         ) : (
@@ -664,7 +723,7 @@ function FuelComparison() {
             type="button"
             onClick={() => setRevealed(true)}
           >
-            See the research finding without choosing →
+            {t("See the research finding without choosing →")}
           </button>
         )}
       </div>
@@ -679,7 +738,7 @@ function PrototypeExplorer() {
   return (
     <div className="trato-v2__prototype-explorer">
       <div
-        aria-label="Choose a concept demonstration"
+        aria-label={t("Choose a concept demonstration")}
         className="trato-v2__prototype-controls"
         role="group"
       >
@@ -714,7 +773,7 @@ function PrototypeExplorer() {
             key={`walkthrough-${demo.id}`}
             className="trato-v2__details trato-v2__walkthrough"
           >
-            <summary>Read the video walkthrough</summary>
+            <summary>{t("Read the video walkthrough")}</summary>
             <ol>
               {demo.walkthrough.map((step) => (
                 <li key={step}>{step}</li>
@@ -726,7 +785,7 @@ function PrototypeExplorer() {
             rel="noreferrer"
             target="_blank"
           >
-            Open video in a new tab ↗
+            {t("Open video in a new tab ↗")}
           </a>
         </div>
         <div aria-live="polite" className="trato-v2__prototype-copy">
@@ -734,15 +793,15 @@ function PrototypeExplorer() {
           <h3>{demo.title}</h3>
           <p>{demo.description}</p>
           <div>
-            <p className="trato-v2__label">What testing revealed</p>
+            <p className="trato-v2__label">{t("What testing revealed")}</p>
             <p>{demo.finding}</p>
           </div>
           <div>
-            <p className="trato-v2__label">Design direction</p>
+            <p className="trato-v2__label">{t("Design direction")}</p>
             <p>{demo.implication}</p>
           </div>
           <p className="trato-v2__source-note">
-            Project exploration · Demonstrates the proposed experience.
+            {t("Project exploration · Demonstrates the proposed experience.")}
           </p>
         </div>
       </div>
