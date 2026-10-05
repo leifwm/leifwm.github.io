@@ -6,6 +6,7 @@ import { t } from "@/i18n/locale";
 import { portfolioColors } from "@/components/primitives";
 import { routeUrl } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
+import { ZoomableImage } from "@/components/zoomable-image";
 import "@/styles/ser-v2.css";
 import "@/styles/project-case-study.css";
 
@@ -153,7 +154,7 @@ export function CaseFigure({
 }) {
   return (
     <figure className="project-case__figure">
-      <img alt={alt} loading="lazy" src={src} />
+      <ZoomableImage alt={alt} src={src} />
       <figcaption>{caption}</figcaption>
     </figure>
   );
@@ -205,9 +206,8 @@ export function CaseExplorer({
           <p>{item.implication}</p>
         </div>
         {item.image && (
-          <img
+          <ZoomableImage
             alt={t("{0} persona from the research synthesis", [item.title])}
-            loading="lazy"
             src={item.image}
           />
         )}

@@ -58,7 +58,7 @@
 .home__outcome > p { font-size: 1rem; }
 .home__case-link { display: flex; align-items: center; justify-content: space-between; font-size: 1rem; font-weight: 600; text-decoration: none; padding-block: .5rem; }
 .home__case-link:hover { text-decoration: underline; }
-.home__project-footer { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 1.5rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--home-line); }
+.home__project-footer { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--home-line); }
 .home__tags { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; padding: 0; margin: 0; }
 .home__tags li { padding: .3rem .7rem; border: 1px solid var(--home-line); border-left: 3px solid var(--project-color); font-size: .8125rem; line-height: 1.5; }
 .home__more-button { flex-shrink: 0; padding: .65rem 1.1rem; }

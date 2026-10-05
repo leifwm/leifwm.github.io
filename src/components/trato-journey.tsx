@@ -299,7 +299,7 @@ export default function TratoJourney() {
 
   return (
     <div
-      className={t("trato-journey{0}", [serviceId ? " is-filtered" : ""])}
+      className={`trato-journey${serviceId ? " is-filtered" : ""}`}
       style={{ "--journey-selected-service": service?.color } as CSSProperties}
     >
       <fieldset className="trato-journey__filters">

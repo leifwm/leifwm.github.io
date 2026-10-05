@@ -7,6 +7,7 @@ import TratoJourney from "@/components/trato-journey";
 import { portfolioColors } from "@/components/primitives";
 import { assetUrl, routeUrl } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
+import { MediaZoom, ZoomableImage } from "@/components/zoomable-image";
 import "@/styles/trato-v2.css";
 
 const chapters = [
@@ -491,42 +492,24 @@ export default function TratoV2Page() {
                   <summary>{t("Explore the original journey maps")}</summary>
                   <div>
                     <figure>
-                      <a
-                        href={assetUrl(
+                      <ZoomableImage
+                        alt={t(
+                          "Original Portuguese journey map: a recurring freight cycle with a road-problem branch and time-off activities",
+                        )}
+                        src={assetUrl(
                           "/assets/img/trato_imgs/journey_trato.jpg",
                         )}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <img
-                          alt={t(
-                            "Original Portuguese journey map: a recurring freight cycle with a road-problem branch and time-off activities",
-                          )}
-                          loading="lazy"
-                          src={assetUrl(
-                            "/assets/img/trato_imgs/journey_trato.jpg",
-                          )}
-                        />
-                      </a>
+                      />
                     </figure>
                     <figure>
-                      <a
-                        href={assetUrl(
+                      <ZoomableImage
+                        alt={t(
+                          "Original journey with six colored service layers: tires, marketplace, finance, social map, fuel and freight",
+                        )}
+                        src={assetUrl(
                           "/assets/img/trato_imgs/journey_trato2.jpg",
                         )}
-                        rel="noreferrer"
-                        target="_blank"
-                      >
-                        <img
-                          alt={t(
-                            "Original journey with six colored service layers: tires, marketplace, finance, social map, fuel and freight",
-                          )}
-                          loading="lazy"
-                          src={assetUrl(
-                            "/assets/img/trato_imgs/journey_trato2.jpg",
-                          )}
-                        />
-                      </a>
+                      />
                     </figure>
                   </div>
                 </details>
@@ -548,23 +531,14 @@ export default function TratoV2Page() {
               <details className="trato-v2__details">
                 <summary>{t("View the original comparison cards")}</summary>
                 <figure>
-                  <a
-                    href={assetUrl(
+                  <ZoomableImage
+                    alt={t(
+                      "Portuguese concept-test cards comparing fuel benefits, financial services, insurance and ways to receive stop recommendations",
+                    )}
+                    src={assetUrl(
                       "/assets/img/trato_imgs/trato_service_concepts.jpg",
                     )}
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      alt={t(
-                        "Portuguese concept-test cards comparing fuel benefits, financial services, insurance and ways to receive stop recommendations",
-                      )}
-                      loading="lazy"
-                      src={assetUrl(
-                        "/assets/img/trato_imgs/trato_service_concepts.jpg",
-                      )}
-                    />
-                  </a>
+                  />
                 </figure>
               </details>
             </section>
@@ -769,6 +743,11 @@ function PrototypeExplorer() {
             src={assetUrl(`/assets/img/trato_imgs/${demo.file}`)}
           />
           <p id="trato-video-summary">{demo.summary}</p>
+          <MediaZoom
+            video
+            alt={demo.label}
+            src={assetUrl(`/assets/img/trato_imgs/${demo.file}`)}
+          />
           <details
             key={`walkthrough-${demo.id}`}
             className="trato-v2__details trato-v2__walkthrough"

@@ -1,0 +1,38 @@
+/* Shared phone layout rhythm across the portfolio and case studies. */
+@media (max-width: 700px) {
+  .portfolio-header { padding-inline: 1.25rem; gap: .5rem; }
+  .cv-page { padding: 3rem 1.25rem; }
+  .cv-page h1 { font-size: clamp(2.7rem, 8vw, 3.5rem); line-height: 1.08; }
+  .cv-page a { display: inline-flex; align-items: center; min-height: 44px; }
+  .portfolio-header button, .language-switch a { min-height: 44px; }
+  .language-switch a { display: inline-flex; align-items: center; justify-content: center; min-width: 28px; }
+  .home .home__wrap, .about-page .about-page__wrap,
+  .ser-case .ser-case__layout, .trato-v2 .trato-v2__layout,
+  .site-footer .site-footer__inner { width: calc(100% - 2.5rem); }
+  .ser-case .ser-case__hero h1, .trato-v2 .trato-v2__hero h1 {
+    font-size: clamp(2.7rem, 8vw, 3.5rem);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+  .ser-case .ser-case__heading h2, .trato-v2 .trato-v2__section-heading h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    overflow-wrap: anywhere;
+  }
+  .ser-case .ser-case__section, .trato-v2 .trato-v2__section,
+  .trato-v2 .trato-v2__journey-section, .trato-v2 .trato-v2__prototype-section,
+  .about-page .about-page__section { padding-block: 4rem; }
+  .ser-case :is(header, section)[id], .trato-v2 :is(header, section)[id] { scroll-margin-top: 11rem; }
+  .ser-case .ser-case__chapter-break h2, .trato-v2 .trato-v2__deep-dive h2 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    overflow-wrap: anywhere;
+  }
+  .ser-case__result-figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ser-case__result-figures strong { overflow-wrap: anywhere; }
+  .project-case__facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .project-case__facts > div { min-width: 0; overflow-wrap: anywhere; }
+  .site-footer__bottom nav a, .home__text-link { min-height: 44px; display: inline-flex; align-items: center; }
+}
+@media (max-width: 380px) {
+  .ser-case .ser-case__result-figures, .project-case__facts { grid-template-columns: 1fr; }
+  .ser-case__results, .ser-case__chapter-break { padding-inline: 1.25rem; }
+}

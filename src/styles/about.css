@@ -50,12 +50,12 @@
 .about-page__languages { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; margin-top: 2rem; font-size: .875rem; }
 .about-page__leadership { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 5rem; }
 .about-page__leadership-copy > p + p { margin-top: 1.25rem; color: var(--about-muted); }
-.about-page__recommendations { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; margin-top: 2.5rem; }
+.about-page__recommendations { display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2.5rem; }
 .about-page__recommendations article { border-top: 3px solid var(--portfolio-breeze); padding-top: 1.25rem; }
 .about-page__recommendations article + article { border-color: var(--portfolio-raspberry); }
 .about-page__recommendations h3 { font-size: 1.125rem; }
 .about-page__recommendation-context { font-size: .8125rem; color: var(--about-muted); margin-top: .5rem !important; }
-.about-page__recommendations article > p:last-child { font-size: 1rem; margin-top: 1rem; }
+.about-page__recommendations blockquote { font-size: 1.125rem; line-height: 1.6; margin: 1rem 0 0; }
 .about-page__recommendation-source { font-size: .875rem; color: var(--about-muted); margin-top: 1.5rem !important; }
 @media (max-width: 1000px) { .about-page__leadership { gap: 3rem; } }
 @media (max-width: 700px) { .about-page__leadership, .about-page__recommendations { grid-template-columns: 1fr; gap: 2rem; } }

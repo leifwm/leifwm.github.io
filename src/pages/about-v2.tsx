@@ -185,36 +185,32 @@ export default function AboutV2Page() {
                 <p className="about-page__recommendation-context">
                   {t("A designer I led")}
                 </p>
-                <p>
+                <blockquote>
+                  “
                   {t(
-                    "Describes an open, safe working environment, thoughtful questioning and leadership that combines technical knowledge with care for people.",
+                    "I had the opportunity to be led by Leif in his first experience managing people, and I can say it was a very successful debut. From the start, he helped build a safe, open and relaxed working environment, while asking questions and prompting important reflection — one of the qualities I most admire and value in him. Combined with his extensive experience and technical expertise, this makes Leif a well-rounded professional who brings together knowledge, critical thinking and a human approach to leadership. I am grateful to have been part of his journey and am certain he will make a difference wherever he goes.",
                   )}
-                </p>
+                  ”
+                </blockquote>
               </article>
               <article>
                 <h3>{t("Luiz Felipe Bulis")}</h3>
                 <p className="about-page__recommendation-context">
                   {t("My manager at Novartis in 2025")}
                 </p>
-                <p>
+                <blockquote>
+                  “
                   {t(
-                    "Highlights project planning, effective mentoring and a willingness to contribute directly, alongside the ability to work in management and senior specialist roles.",
+                    "I had the pleasure of leading Leif in his role as Design Coordinator at Novartis during 2025. It was a year of significant growth in soft skills, especially leadership behaviors, for a professional with substantial technical expertise and a wide range of previous experiences. I would highlight the breadth of his contribution: from project planning and management to close support and effective mentoring of the team, never hesitating to roll up his sleeves when needed. His range of skills allows him to move between and add value in both management tracks and senior specialist positions. I know he will be a valuable asset to any organization looking for this combination of technical experience and leadership.",
                   )}
-                </p>
+                  ”
+                </blockquote>
               </article>
             </div>
             <p className="about-page__recommendation-source">
               {t(
-                "Summaries of recommendations originally written in Portuguese.",
+                "Recommendations originally written in Portuguese. English translations.",
               )}
-              <a
-                href="https://br.linkedin.com/in/leif-magalhaes"
-                rel="noreferrer"
-                target="_blank"
-              >
-                {" "}
-                {t("Read the recommendations on LinkedIn ↗")}
-              </a>
             </p>
           </div>
         </section>
@@ -275,14 +271,6 @@ export default function AboutV2Page() {
                 "I’m also exploring how AI can help with research and design, especially the repetitive work of organizing information. What interests me is having more time to interpret findings and ask better questions.",
               )}
             </p>
-            <div className="about-page__learning">
-              <h3>{t("Always learning")}</h3>
-              <p>
-                {t(
-                  "Design graduate from ESPM, with further study in design thinking and animation. Completed Codecademy’s Front-End Engineer course in December 2025.",
-                )}
-              </p>
-            </div>
             <div className="about-page__languages">
               <span>{t("Portuguese · Native")}</span>
               <span>{t("English · C1")}</span>

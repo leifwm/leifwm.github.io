@@ -9,7 +9,7 @@ export default function CVPage() {
 
   return (
     <DefaultLayout>
-      <section className="mx-auto max-w-4xl px-6 py-20">
+      <section className="cv-page mx-auto max-w-4xl px-6 py-20">
         <h1 className="text-4xl font-semibold">{pt ? "Currículo" : "CV"}</h1>
         <p className="mt-6 text-xl">
           {pt

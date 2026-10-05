@@ -8,6 +8,7 @@ import PertinhoPage from "@/pages/pertinho-v2";
 import SerDigitalCaseStudy from "@/pages/ser-v2";
 import IPadSurveyPage from "@/pages/ipadsurvey-v2";
 import { getLocale } from "@/i18n/locale";
+import "@/styles/mobile.css";
 
 function App() {
   return (
