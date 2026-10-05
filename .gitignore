@@ -27,3 +27,15 @@ pnpm-lock.yaml
 yarn.lock
 package-lock.json
 bun.lockb
+
+# Local notes, context, and unused source assets
+/.claude/
+/.vscode/feedbacks
+/.vscode/globals.css
+/feedback/
+/project_context/
+/entrevista tecnica
+/assets/LeifMagalhaesCV_en.docx - Shortcut.lnk
+/assets/LeifMagalhaesCV_pt.docx - Shortcut.lnk
+/assets/img/project_thumbnails/TratoFretesVideo.mov
+/assets/img/project_thumbnails/TratoFretesVideo.mp4

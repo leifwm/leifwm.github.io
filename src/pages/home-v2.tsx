@@ -3,6 +3,8 @@ import type { CSSProperties } from "react";
 import { useEffect } from "react";
 
 import portrait from "../../assets/img/photo me.jpg";
+import serCover from "../../assets/img/serdigital_imgs/ser_cover.jpg";
+import pertinhoCover from "../../assets/img/pertinho_imgs/cover_pertinho.jpg";
 
 import { formatNumber, t } from "@/i18n/locale";
 import { portfolioColors } from "@/components/primitives";
@@ -47,7 +49,7 @@ const projects = [
     ),
     metric: "51",
     metricLabel: t("proposed initiatives"),
-    image: "/assets/img/serdigital_imgs/ser_cover.jpg",
+    image: serCover,
     href: "/ser",
     color: "aloe",
   },
@@ -63,7 +65,7 @@ const projects = [
     ),
     metric: "3",
     metricLabel: t("business personas"),
-    image: "/assets/img/pertinho_imgs/cover_pertinho.jpg",
+    image: pertinhoCover,
     href: "/pertinho",
     color: "cloudberry",
   },
@@ -202,7 +204,7 @@ export default function HomePage() {
                     <img
                       alt={`${project.title} project`}
                       loading="lazy"
-                      src={assetUrl(project.image)}
+                      src={project.image}
                     />
                   ) : (
                     <div className="home__survey-preview">
