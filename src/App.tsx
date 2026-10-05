@@ -6,7 +6,7 @@ import AboutPage from "@/pages/about";
 import CVPage from "@/pages/cv";
 import TratoV2Page from "@/pages/trato-v2";
 import PertinhoPage from "@/pages/pertinho";
-import SerDigitalCaseStudy from "@/pages/ser";
+import SerDigitalCaseStudy from "@/pages/ser-v2";
 import IPadSurveyPage from "@/pages/ipadsurvey";
 
 
